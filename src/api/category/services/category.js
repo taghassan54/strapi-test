@@ -6,4 +6,6 @@
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::category.category');
+module.exports = createCoreService('api::category.category',  ({strapi}) => {
+  console.log("strapi_log", strapi)
+});
